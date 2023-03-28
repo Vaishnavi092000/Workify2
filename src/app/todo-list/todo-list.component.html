@@ -1,0 +1,74 @@
+<div class="container text-center main-container">
+  <div class="container mb-10 rounded-container shadow">
+    <div class="wid60">Manage Your Tasks Smartly</div>
+    <div class="wid40"><img src="../../assets/to-do-list.png"></div>      
+  </div>  
+  
+  <div class="container mb-10">
+      <h4 class="text-left mb-10"><b>Categories</b></h4>
+      <table class="categories-table w100 nav nav-pills" [cellSpacing]="10">
+        <tr class="category-icons">
+            <td><button class="btn btn" (click)="showPersonal()"><img src="../../assets/user.png" class="w100 dim24"></button></td>
+            <td><button class="btn btn" (click)="showWork()"><img src="../../assets/suitcase.png" class="w100 dim24"></button></td>
+            <td><button class="btn btn" (click)="showTravel()"><img src="../../assets/travel.png" class="w100 dim24"></button></td>
+            <td><button class="btn btn" (click)="showHealth()"><img src="../../assets/cardiogram.png" class="w100 dim24"></button></td>
+            <td><button class="btn btn" (click)="addCategory()"><img src="../../assets/add-button.png" class="w100 dim24"></button></td>
+        </tr>
+        <tr>
+            <td class="category-name">Personal</td>
+            <td class="category-name">Work</td>
+            <td class="category-name">Travel</td>
+            <td class="category-name">Health</td>
+            <td class="category-name">Add</td>
+        </tr>
+      </table>
+  </div>
+
+  <div class="container">
+
+    <h4 class="task-list-title text-left">You have {{ totalTasks }} tasks for today</h4>
+
+    <div class="task-list" width="100%">
+      <div type="none" *ngFor="let a of todos; index as i" class="tr" width="100%">
+        <div class="title">{{ a.title }} </div>
+        <div class="del"><img src="../../assets/check (1).png" id="todo{{i}}" (todo)="a" (i)="i" (click)="toggleTodo(a)"></div>
+        <div class="del"><img src="../../assets/multiply (1).png" (todo)="a" (i)="i" (click)="deleteItem(i)"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+      <button class="btn btn-default" data-toggle="modal" data-target="#myModal">+</button>
+
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              
+            </div>
+            <div class="modal-body">
+              <app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+  </div>
+
+
+  <div class="container">
+
+    <h4 class="task-list-title text-left">Completed Tasks :</h4>
+
+    <div class="task-list" width="100%">
+      <div type="none" *ngFor="let b of donetodos; index as i" class="tr" width="100%">
+        <div class="title">{{ b.title }} </div>
+        <div class="del2"><img src="../../assets/multiply (1).png" (donetodos)="b" (i)="i" (click)="deleteDoneItem(i)"></div>
+      </div>
+    </div>
+  </div>
+</div>

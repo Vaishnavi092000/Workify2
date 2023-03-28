@@ -1,0 +1,22 @@
+.app-name{font-family: 'Lobster', cursive;}
+*{font-family: 'Roboto Slab', serif;} 
+.main-container{padding: 10% 0%; padding-top: 0;}
+.mb-10{margin-bottom: 10%;}
+.mb-5{margin-top: 5%;}
+.mb-20{margin-bottom: 20%;}
+.w100{width: 100%;}
+
+.rounded-container{background: #FF735C;float: left; width: 100%; padding:20px 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.wid60{width: 60%; float: left; color: #ffffff; font-size: 1.5em;}
+.wid40{width: 40%; float: left;}
+.category-icons td{padding: 6px; width: 20%;}
+.dim24{width: 24px; height: 24px;}
+.category-name{font-size: 12px;}
+.task-list-title{margin-bottom: 20px;}
+
+.task-list .tr{padding: 10px 20px; text-align: left; width:100%; float:left; background-color: #ffe1dc; border-radius: 12px; margin-bottom: 20px; font-size: 14px; color: gray; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.task-list div{float: left;}
+.title{width:70%; float: left;}
+.del{width:15%; float: left; text-align: center;}
+.del2{width:30%; float: left; text-align: right;}
+.task-list{float: left; width: 100%;}

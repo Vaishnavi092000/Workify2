@@ -1,0 +1,7 @@
+{
+  "name": "Workify",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
